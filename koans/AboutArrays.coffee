@@ -3,8 +3,8 @@ describe 'About Arrays', ->
   # We shall contemplate truth by testing reality, via spec expectations.
     emptyArray = []
 
-    expect(typeof emptyArray).toBe(FILL_ME_IN) # A mistake? - http://j.mp/oRuo6R
-    expect(emptyArray.length).toBe(FILL_ME_IN)
+    expect(typeof emptyArray).toBe('object') # A mistake? - http://j.mp/oRuo6R
+    expect(emptyArray.length).toBe(0)
 
 
   it 'should understand array literals', ->
@@ -15,24 +15,24 @@ describe 'About Arrays', ->
     expect(array).toEqual([1])
 
     array[1] = 2
-    expect(array).toEqual([1, FILL_ME_IN])
+    expect(array).toEqual([1, 2])
 
     array.push(3)
-    expect(array).toEqual(FILL_ME_IN)
+    expect(array).toEqual([1, 2, 3])
 
 
   it 'should understand array length', ->
     fourNumberArray = [1, 2, 3, 4]
 
-    expect(fourNumberArray.length).toBe(FILL_ME_IN)
+    expect(fourNumberArray.length).toBe(4)
     fourNumberArray.push(5, 6)
-    expect(fourNumberArray.length).toBe(FILL_ME_IN)
+    expect(fourNumberArray.length).toBe(6)
 
     tenEmptyElementArray = new Array(10)
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN)
+    expect(tenEmptyElementArray.length).toBe(10)
 
     tenEmptyElementArray.length = 5
-    expect(tenEmptyElementArray.length).toBe(FILL_ME_IN)
+    expect(tenEmptyElementArray.length).toBe(5)
 
 
   it 'should understand multitype arrays', ->
@@ -45,11 +45,11 @@ describe 'About Arrays', ->
                       [6
                       7]]
 
-    expect(multiTypeArray[0]).toBe(FILL_ME_IN)
-    expect(multiTypeArray[2]).toBe(FILL_ME_IN)
-    expect(multiTypeArray[3]()).toBe(FILL_ME_IN) # Note the parens!
-    expect(multiTypeArray[4].value1).toBe(FILL_ME_IN)
-    expect(multiTypeArray[5][0]).toBe(FILL_ME_IN)
+    expect(multiTypeArray[0]).toBe(0)
+    expect(multiTypeArray[2]).toBe('two')
+    expect(multiTypeArray[3]()).toBe(3) # Note the parens!
+    expect(multiTypeArray[4].value1).toBe(4)
+    expect(multiTypeArray[5][0]).toBe(6)
 
 
   it 'should understand array ranges', ->
